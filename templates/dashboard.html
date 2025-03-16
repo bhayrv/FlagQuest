@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1 class="mt-4">Dashboard</h1>
+<p><strong>Total Points:</strong> {{ points }}</p>
+<h3>Completed Challenges</h3>
+{% if completed %}
+  <ul class="list-group">
+    {% for cid, chal in completed.items() %}
+      <li class="list-group-item">
+        {{ chal.title }} (Category: {{ chal.category }})
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>You haven't completed any challenges yet.</p>
+{% endif %}
+{% endblock %}

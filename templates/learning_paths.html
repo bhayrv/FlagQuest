@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Learning Paths{% endblock %}
+{% block content %}
+<h1 class="mt-4">Learning Paths</h1>
+{% for category, challenges_list in paths.items() %}
+  <h3 class="mt-4">{{ category }}</h3>
+  <div class="list-group">
+    {% for cid, chal in challenges_list %}
+      <a href="{{ url_for('challenge', challenge_id=cid) }}" class="list-group-item list-group-item-action">
+        {{ chal.title }}
+      </a>
+    {% endfor %}
+  </div>
+{% endfor %}
+{% endblock %}

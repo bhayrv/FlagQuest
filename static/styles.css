@@ -1,0 +1,121 @@
+/* Global Styles */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/CustomFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'CustomFont', sans-serif;
+}
+
+/* Navbar Customization */
+.navbar-custom {
+    background-color: #4caf50;
+    transition: background-color 0.3s;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-link,
+.navbar-custom .nav-link {
+    color: #fff !important;
+}
+.navbar-custom .nav-link:hover {
+    color: #e8f5e9 !important;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #e8f5e9;
+    padding: 80px 0;
+    transition: background-color 0.3s;
+}
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+#hero p.lead {
+    font-size: 1.25rem;
+}
+
+/* Features Section */
+#features {
+    padding: 60px 0;
+    transition: padding 0.3s;
+}
+#features img {
+    margin-bottom: 15px;
+}
+
+/* Latest Challenges Section */
+#latest-challenges {
+    background-color: #fff;
+    padding: 60px 0;
+    transition: background-color 0.3s, padding 0.3s;
+}
+.challenge-card {
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.challenge-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.challenge-card .card-header {
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 60px 0;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s, padding 0.3s;
+}
+blockquote {
+    border-left: 4px solid #4caf50;
+    padding-left: 15px;
+}
+
+/* Call to Action Section */
+#cta {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 60px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+/* Footer */
+.footer {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 40px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+.footer a {
+    color: #fff;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Button Overrides */
+.btn-primary {
+    background-color: #4caf50;
+    border-color: #43a047;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #43a047;
+    border-color: #388e3c;
+}

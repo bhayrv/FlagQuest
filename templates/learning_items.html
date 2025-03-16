@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Learn Cyber Security from Scratch{% endblock %}
+{% block content %}
+<section id="learning-path" class="py-5">
+  <div class="container-fluid px-4">
+    <h1 class="text-center mb-4">Learn Cyber Security from Scratch</h1>
+    <p class="lead text-center mb-5">Whether you’re completely new or looking to strengthen your fundamentals, follow our guided modules to master cybersecurity.</p>
+    <div class="row">
+      {% for id, item in learning_items.items() %}
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card challenge-card h-100">
+          <div class="card-header">
+            {{ item.title }}
+          </div>
+          <div class="card-body">
+            <p>{{ item.description }}</p>
+            <h6>Resources:</h6>
+            <ul>
+              {% for resource in item.resources %}
+              <li><a href="{{ resource.url }}" target="_blank">{{ resource.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

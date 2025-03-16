@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ challenge.title }}{% endblock %}
+{% block content %}
+<h2>{{ challenge.title }}</h2>
+<p>{{ challenge.description }}</p>
+<p><strong>Category:</strong> {{ challenge.category }}</p>
+
+{% if message %}
+  <div class="alert alert-info">{{ message }}</div>
+{% endif %}
+
+<p class="text-muted">Note: Complete previous challenges to unlock new ones.</p>
+
+<!-- Form for flag submission -->
+<form method="POST" class="mb-3">
+  <div class="form-group">
+    <label for="flag">Enter Flag:</label>
+    <input type="text" class="form-control" id="flag" name="flag" placeholder="flag{...}">
+  </div>
+  <button type="submit" name="action" value="submit" class="btn btn-primary">Submit Flag</button>
+</form>
+
+<!-- Button to request hint -->
+<form method="POST">
+  <button type="submit" name="action" value="hint" class="btn btn-warning">Show Hint (Costs 10 points)</button>
+</form>
+
+<a href="{{ url_for('index') }}" class="btn btn-secondary mt-3">Back to Challenges</a>
+{% endblock %}
